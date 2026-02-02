@@ -21,7 +21,7 @@ export default function GovernanceVis() {
 
     // Charset
     // Using a simpler set for cleaner "blocks"
-    const chars = "  ...:::;;;//XXX%%%###@@@";
+    const chars = ".:;///XXX%%%###@@@";
 
     const handleResize = () => {
       width = canvas.width = canvas.offsetWidth;
@@ -114,11 +114,10 @@ export default function GovernanceVis() {
           const charIndex = Math.floor(val * chars.length);
           const char = chars[Math.max(0, Math.min(chars.length - 1, charIndex))];
 
-          // Uniform Brightness (No Flashlight)
-          const opacity = val * mask * 1.5; // Increased from 0.8 to compensate for the hero blur
+          // Boost the minimum visibility to ensure it covers the entire screen
+          const opacity = (val * 0.7 + 0.3) * mask * 0.8;
 
           // Brand Orange Color (Rose Orange)
-          // rgba(255, 127, 80, opacity)
           ctx.fillStyle = `rgba(255, 127, 80, ${opacity})`;
           ctx.fillText(char, realX, realY);
         }

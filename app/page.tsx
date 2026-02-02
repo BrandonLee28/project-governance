@@ -41,10 +41,8 @@ export default function Home() {
         {/* Background Effects */}
         <div className="absolute inset-0 z-0" aria-hidden="true">
           <GovernanceVis />
-          {/* Blur layer for center readability */}
-          <div className="absolute inset-0 bg-[#050505]/40 backdrop-blur-[2px]" />
-          {/* Void Black Vignette to fade edges */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,#050505_90%)]" />
+          {/* Subtle overlay for contrast */}
+          <div className="absolute inset-0 bg-[#050505]/30 backdrop-blur-[1px]" />
         </div>
 
         {/* Hero Content */}
