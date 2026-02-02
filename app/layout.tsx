@@ -10,8 +10,8 @@ const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces" });
 
 export const metadata: Metadata = {
-  title: "Governance Protocol Explorer",
-  description: "Logic Layer for the Autonomous Enterprise",
+  title: "iya",
+  description: "We provide an immutable audit trail for autonomous AI agents, capturing intent and verifying identity to solve the compliance gap for enterprise agents, ensuring accountability in the age of agentic workflows.",
 };
 
 export default function RootLayout({

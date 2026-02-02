@@ -2,7 +2,7 @@
 
 ## Hero Section
 **Title:** The System of Record for the Agentic Enterprise.
-**Subtitle:** AgentTrace provides the immutable "Black Box" for autonomous AI. Capture intent, verify identity, and automate the audit trail for every non-human interaction in your stack.
+**Subtitle:** We provide an immutable audit trail for autonomous AI agents, capturing intent and verifying identity to solve the compliance gap for enterprise agents, ensuring accountability in the age of agentic AI.
 **CTA:** Waitlist Signup Form
 **Link:** Read the Whitepaper
 **Attribution:** Engineered at the intersection of AI Governance and Cryptography

@@ -14,33 +14,33 @@ export default function HowItWorks() {
                 <div className="bg-[#111] p-8 rounded-xl border border-white/10 w-full max-w-md mx-auto shadow-2xl">
                     <div className="flex items-center justify-between mb-8 border-b border-white/5 pb-6">
                         <div className="flex items-center gap-4">
-                            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center border border-white/10">
-                                <Activity className="text-blue-400" size={20} />
+                            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FF7F50]/20 to-[#FF4500]/20 flex items-center justify-center border border-[#FF7F50]/20" aria-hidden="true">
+                                <Activity className="text-[#FF7F50]" size={20} />
                             </div>
                             <div>
                                 <h4 className="text-white font-medium text-lg">Agent_007</h4>
-                                <span className="text-xs text-[#666] font-mono">DID: did:gov:892...x99</span>
+                                <span className="text-xs text-neutral-400 font-mono">DID: did:gov:892...x99</span>
                             </div>
                         </div>
-                        <div className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full flex items-center gap-2">
-                            <ShieldCheck size={12} className="text-blue-400" />
-                            <span className="text-blue-400 text-xs font-medium tracking-wide">SIGNED</span>
+                        <div className="px-3 py-1 bg-[#FF7F50]/10 border border-[#FF7F50]/20 rounded-full flex items-center gap-2">
+                            <ShieldCheck size={12} className="text-[#FF7F50]" />
+                            <span className="text-[#FF7F50] text-xs font-medium tracking-wide">SIGNED</span>
                         </div>
                     </div>
 
                     <div className="space-y-4">
                         <div className="flex justify-between items-center text-sm">
-                            <span className="text-[#666]">Model Checksum</span>
+                            <span className="text-neutral-400">Model Checksum</span>
                             <span className="text-white font-mono text-xs">sha256:7f...a1</span>
                         </div>
                         <div className="flex justify-between items-center text-sm">
-                            <span className="text-[#666]">Authentication</span>
-                            <span className="text-white flex items-center gap-2"><Lock size={12} className="text-[#888]" /> mTLS Certificate</span>
+                            <span className="text-neutral-400">Authentication</span>
+                            <span className="text-white flex items-center gap-2" aria-label="Authenticated with mTLS Certificate"><Lock size={12} className="text-neutral-500" aria-hidden="true" /> mTLS Certificate</span>
                         </div>
                         <div className="flex justify-between items-center text-sm">
-                            <span className="text-[#666]">Liability Owner</span>
+                            <span className="text-neutral-400">Liability Owner</span>
                             <div className="flex items-center gap-2">
-                                <div className="w-5 h-5 rounded-full bg-[#333]" />
+                                <div className="w-5 h-5 rounded-full bg-[#333]" aria-hidden="true" />
                                 <span className="text-white">Prod_Engineering</span>
                             </div>
                         </div>
@@ -56,8 +56,8 @@ export default function HowItWorks() {
             visual: (
                 <div className="bg-[#111] p-8 rounded-xl border border-white/10 w-full max-w-md mx-auto shadow-2xl space-y-6">
                     <div className="flex items-center gap-3 mb-4">
-                        <Settings className="text-[#666]" size={18} />
-                        <h4 className="text-[#888] font-mono text-xs uppercase tracking-widest">Forensic Trace Log</h4>
+                        <Settings className="text-neutral-500" size={18} aria-hidden="true" />
+                        <h4 className="text-neutral-400 font-mono text-xs uppercase tracking-widest">Forensic Trace Log</h4>
                     </div>
 
                     <div className="space-y-4 relative">
@@ -66,19 +66,19 @@ export default function HowItWorks() {
 
                         {/* Step 1 */}
                         <div className="relative pl-8">
-                            <div className="absolute left-0 top-1 w-5 h-5 rounded-full bg-[#333] border border-white/10 flex items-center justify-center">
+                            <div className="absolute left-0 top-1 w-5 h-5 rounded-full bg-[#333] border border-white/10 flex items-center justify-center" aria-hidden="true">
                                 <span className="w-1.5 h-1.5 rounded-full bg-white" />
                             </div>
-                            <span className="text-xs text-[#666] font-mono mb-1 block">INPUT • 14:02:22</span>
+                            <span className="text-xs text-neutral-400 font-mono mb-1 block">INPUT • 14:02:22</span>
                             <p className="text-white/90 text-sm">"Refund user_442 for order #991"</p>
                         </div>
 
                         {/* Step 2 */}
                         <div className="relative pl-8">
                             <div className="absolute left-0 top-1 w-5 h-5 rounded-full bg-[#333] border border-white/10 flex items-center justify-center">
-                                <Activity size={10} className="text-blue-400" />
+                                <Activity size={10} className="text-[#FF7F50]" />
                             </div>
-                            <span className="text-xs text-blue-400 font-mono mb-1 block">REASONING CHAIN</span>
+                            <span className="text-xs text-[#FF7F50] font-mono mb-1 block">REASONING CHAIN</span>
                             <div className="p-3 bg-white/5 rounded border border-white/5 text-xs text-[#aaa] font-mono leading-relaxed">
                                 &gt; Check policy: refund_cap<br />
                                 &gt; Order amount: $450.00<br />
@@ -107,9 +107,9 @@ export default function HowItWorks() {
             visual: (
                 <div className="bg-[#111] rounded-xl border border-white/10 w-full max-w-md mx-auto shadow-2xl overflow-hidden">
                     <div className="bg-[#161616] px-6 py-4 border-b border-white/5 flex justify-between items-center">
-                        <span className="text-[#666] text-xs font-mono uppercase tracking-widest">Compliance Monitor</span>
-                        <div className="flex gap-1.5 items-center px-2 py-0.5 rounded bg-green-500/10 border border-green-500/20">
-                            <ShieldCheck size={10} className="text-green-500" />
+                        <span className="text-neutral-400 text-xs font-mono uppercase tracking-widest">Compliance Monitor</span>
+                        <div className="flex gap-1.5 items-center px-2 py-0.5 rounded bg-green-500/10 border border-green-500/20" role="status" aria-label="Compliance Status: SOC2 Ready">
+                            <ShieldCheck size={10} className="text-green-500" aria-hidden="true" />
                             <span className="text-green-500 text-[10px] font-bold">SOC2 READY</span>
                         </div>
                     </div>
@@ -122,7 +122,7 @@ export default function HowItWorks() {
                                 </div>
                                 <div>
                                     <div className="text-white text-sm font-medium">Policy Check #881</div>
-                                    <div className="text-[#666] text-xs mt-0.5">EU Identity Verified</div>
+                                    <div className="text-neutral-400 text-xs mt-0.5">EU Identity Verified</div>
                                 </div>
                             </div>
                         </div>
@@ -146,11 +146,11 @@ export default function HowItWorks() {
                                 </div>
                                 <div>
                                     <div className="text-white text-sm font-medium">Export Compliance Report</div>
-                                    <div className="text-[#666] text-xs mt-0.5">PDF • Generated 2m ago</div>
+                                    <div className="text-neutral-400 text-xs mt-0.5">PDF • Generated 2m ago</div>
                                 </div>
                             </div>
                             <div className="text-right">
-                                <span className="text-[10px] text-white underline cursor-pointer">Download</span>
+                                <button className="text-[10px] text-white underline hover:no-underline focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#111] transition-all">Download</button>
                             </div>
                         </div>
                     </div>
@@ -161,13 +161,13 @@ export default function HowItWorks() {
 
     return (
         <section className="py-32 px-6 bg-[#0A0A0A] text-white relative overflow-hidden">
-            {/* Ambient Background Glows */}
-            <div className="absolute top-0 left-1/4 w-[1000px] h-[500px] bg-blue-900/[0.05] rounded-full blur-[120px] pointer-events-none" />
-            <div className="absolute bottom-0 right-1/4 w-[1000px] h-[500px] bg-purple-900/[0.05] rounded-full blur-[120px] pointer-events-none" />
+            {/* Ambient Background Glows - Orange Tinted */}
+            <div className="absolute top-0 left-1/4 w-[1000px] h-[500px] bg-[#FF7F50]/[0.05] rounded-full blur-[120px] pointer-events-none" />
+            <div className="absolute bottom-0 right-1/4 w-[1000px] h-[500px] bg-[#FF4500]/[0.05] rounded-full blur-[120px] pointer-events-none" />
 
             <div className="max-w-6xl mx-auto relative z-10">
                 <div className="mb-24">
-                    <span className="text-xs font-mono text-[#666] tracking-[0.2em] uppercase block mb-4">
+                    <span className="text-xs font-mono text-neutral-400 tracking-[0.2em] uppercase block mb-4">
                         Process
                     </span>
                     <h2 className="text-5xl md:text-6xl font-sans font-light tracking-tight">
@@ -187,14 +187,14 @@ export default function HowItWorks() {
                                 transition={{ duration: 0.6 }}
                                 className="flex-1 space-y-6"
                             >
-                                <div className="text-[#333] font-mono text-6xl font-bold opacity-50">
+                                <div className="text-neutral-800 font-mono text-6xl font-bold" aria-hidden="true">
                                     {step.id}
                                 </div>
                                 <h3 className="text-3xl font-medium">{step.title}</h3>
-                                <p className="text-[#888] text-lg leading-relaxed max-w-md">
+                                <p className="text-neutral-400 text-lg leading-relaxed max-w-md">
                                     {step.desc}
                                 </p>
-                                <div className="inline-block px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-mono text-[#666]">
+                                <div className="inline-block px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-mono text-neutral-400">
                                     {step.focus}
                                 </div>
                             </motion.div>

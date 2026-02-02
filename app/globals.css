@@ -11,8 +11,12 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #050505;
+  --foreground: #ffffff;
+
+  --rose-orange: #FF7F50;
+  --rose-orange-glow: #FF4500;
+  --void-black: #050505;
 }
 
 body {

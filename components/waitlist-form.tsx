@@ -35,10 +35,11 @@ export default function WaitlistForm() {
                 <input
                     type="email"
                     placeholder="enterprise@domain.com"
+                    aria-label="Email address for waitlist"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     disabled={status === "loading"}
-                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-full text-white placeholder:text-white/30 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/10 backdrop-blur-sm transition-all font-mono text-sm disabled:opacity-50 shadow-sm"
+                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-full text-white placeholder:text-neutral-500 focus:outline-none focus:border-white/40 focus:ring-1 focus:ring-white/20 backdrop-blur-sm transition-all font-mono text-sm disabled:opacity-50 shadow-sm"
                 />
             </div>
             <button
