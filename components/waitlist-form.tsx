@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ArrowRight, Check, Loader2 } from "lucide-react";
+import { supabase } from "@/lib/supabase";
 
 export default function WaitlistForm() {
     const [email, setEmail] = useState("");
@@ -13,11 +14,31 @@ export default function WaitlistForm() {
 
         setStatus("loading");
 
-        // Simulate API call to Supabase
-        setTimeout(() => {
+        try {
+            const { error } = await supabase
+                .from('waitlist')
+                .insert([{ email }]);
+
+            if (error) {
+                console.error("Supabase error:", error);
+
+                // Handle already exists error (code 23505) gracefully
+                if (error.code === '23505') {
+                    setStatus("success");
+                    setEmail("");
+                    return;
+                }
+
+                setStatus("error");
+                return;
+            }
+
             setStatus("success");
             setEmail("");
-        }, 1500);
+        } catch (err) {
+            console.error("Form submission error:", err);
+            setStatus("error");
+        }
     };
 
     if (status === "success") {
@@ -56,6 +77,11 @@ export default function WaitlistForm() {
                     </>
                 )}
             </button>
+            {status === "error" && (
+                <p className="absolute -bottom-6 left-5 text-red-500 text-[10px] font-mono animate-pulse">
+                    Submission failed. Please try again.
+                </p>
+            )}
         </form>
     );
 }
